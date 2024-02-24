@@ -4,15 +4,15 @@ let count=0;
 let isWinner=false;
 let WinningPattens= [[0,1,2],[0,3,6],[0,4,8],[1,4,7],[2,5,8],[2,4,6],[3,4,5],[6,7,8]];
 let resetbtn=document.querySelector("#reset");
-let Winner= document.querySelector(".winner");
-
+let Winner= document.querySelector(".display_Winner");
+let result = document.querySelector(".winner")
 
 const checkWinner=()=>{
     WinningPattens.forEach(pattern=>{
         if(buttons[pattern[0]].innerText==buttons[pattern[1]].innerText&&buttons[pattern[1]].innerText==buttons[pattern[2]].innerText&&buttons[pattern[2]].innerText!=""){
-            Winner.innerText="Player "+buttons[pattern[0]].innerText+" is Winner!"
+            result.innerText="Player "+buttons[pattern[0]].innerText+" is Winner!"
             Winner.classList.remove("hidden");
-            Winner.classList.add("block");
+            Winner.classList.add("flex");
             buttons.forEach(btn =>{
                 btn.disabled=true;
             });
@@ -29,7 +29,7 @@ const reset = ()=>{
         btn.disabled=false
         flag=1
         count=0
-        Winner.classList.remove("block");
+        Winner.classList.remove("flex");
         Winner.classList.add("hidden");
         isWinner=false;
         btn.style.color="#b0413e"
@@ -53,9 +53,9 @@ buttons.forEach((btn) => {
         if(count>=5)
             checkWinner();
         if(count>8&& !isWinner){    
-            Winner.innerText="It's a Tie!"
+            result.innerText="It's a Tie!"
             Winner.classList.remove("hidden");
-            Winner.classList.add("block");
+            Winner.classList.add("flex");
         }
                 
     });
