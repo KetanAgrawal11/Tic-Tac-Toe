@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-[#548687]">
+    <div class="game mt-8 flex justify-center flex-col items-center">
+        <div class="display_Winner h-screen hidden justify-center items-center flex-col">
+            <div class="winner text-[#ffffc7] text-5xl my-6"></div>
+            <button id="reset" class="p-2 text-white text-xl bg-[#191913] rounded-xl w-24 my-6">Restart</button>
+        </div>
+        <h1 class="text-4xl font-bold">Tic Tac Toe</h1>
+        <div class="buttons w-[450px] my-8 mx-auto flex gap-3 flex-wrap justify-center items-center">
+            <button class="btn h-32 w-32 rounded-xl bg-[#ffffc7] text-[#b0413e] border-none text-7xl shadow-md shadow-slate-600"></button>
+            <button class="btn h-32 w-32 rounded-xl bg-[#ffffc7] text-[#b0413e] border-none text-7xl shadow-md shadow-slate-600"></button>
+            <button class="btn h-32 w-32 rounded-xl bg-[#ffffc7] text-[#b0413e] border-none text-7xl shadow-md shadow-slate-600"></button>
+            <button class="btn h-32 w-32 rounded-xl bg-[#ffffc7] text-[#b0413e] border-none text-7xl shadow-md shadow-slate-600"></button>
+            <button class="btn h-32 w-32 rounded-xl bg-[#ffffc7] text-[#b0413e] border-none text-7xl shadow-md shadow-slate-600"></button>
+            <button class="btn h-32 w-32 rounded-xl bg-[#ffffc7] text-[#b0413e] border-none text-7xl shadow-md shadow-slate-600"></button>
+            <button class="btn h-32 w-32 rounded-xl bg-[#ffffc7] text-[#b0413e] border-none text-7xl shadow-md shadow-slate-600"></button>
+            <button class="btn h-32 w-32 rounded-xl bg-[#ffffc7] text-[#b0413e] border-none text-7xl shadow-md shadow-slate-600"></button>
+            <button class="btn h-32 w-32 rounded-xl bg-[#ffffc7] text-[#b0413e] border-none text-7xl shadow-md shadow-slate-600"></button>
+        </div>
+
+        <button id="reset" class="p-2 text-white text-xl bg-[#191913] rounded-xl w-24 mb-6" onclick="reset()">Reset</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
